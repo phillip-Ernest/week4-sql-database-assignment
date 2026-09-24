@@ -5,6 +5,7 @@ SELECT
     SUM(amount) AS total_amount_paid
 FROM payments
 GROUP BY paymentDate
+HAVING SUM(amount) > 50000
 ORDER BY paymentDate DESC
 LIMIT 5;
 SELECT
